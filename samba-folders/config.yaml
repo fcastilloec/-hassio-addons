@@ -45,7 +45,7 @@ schema:
   workgroup: str
   compatibility_mode: bool
   skip_directories:
-    - list(config|ssl|addons|share|backup|media)
+    - match(config|ssl|addons|share|backup|media)
   veto_files:
     - str
   allow_hosts:
