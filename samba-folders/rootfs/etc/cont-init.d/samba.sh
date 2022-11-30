@@ -35,11 +35,15 @@ jq ".interfaces = $(jq -c -n '$ARGS.positional' --args -- "${interfaces[@]}")" /
       -template /usr/share/tempio/smb.gtpl \
       -out /etc/samba/smb.conf
 
-for dir in $(bashio::config 'skip_directories'); do
+
+for dir in $(bashio::config 'include_directories'); do
+    bashio::log.info "Adding: ${dir}"
     tempio \
       -template "/usr/share/tempio/${dir}.gtpl" \
       >> /etc/samba/smb.conf
 done
+
+bashio::log.info "Samba config: $(cat /etc/samba/smb.conf)"
 
 # Init user
 username=$(bashio::config 'username')

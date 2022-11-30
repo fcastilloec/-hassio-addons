@@ -32,7 +32,13 @@ Add-on configuration:
 workgroup: WORKGROUP
 username: homeassistant
 password: YOUR_PASSWORD
-skip_directories: []
+include_directories:
+  - config
+  - ssl
+  - addons
+  - share
+  - backup
+  - media
 allow_hosts:
   - 10.0.0.0/8
   - 172.16.0.0/12
@@ -57,9 +63,9 @@ The username you would like to use to authenticate with the Samba server.
 
 The password that goes with the username configured for authentication.
 
-### Option: `skip_directories` (optional)
+### Option: `include_directories` (optional)
 
-List of directories that won't be included when sharing. Allowed names are: `addons`, `backup`, `config`, `media`, `share`, and `ssl`.
+List of directories that will be included when sharing. Allowed names are: `addons`, `backup`, `config`, `media`, `share`, and `ssl`.
 
 ### Option: `allow_hosts` (required)
 
