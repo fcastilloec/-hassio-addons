@@ -26,7 +26,13 @@ options:
   username: homeassistant
   password: null
   workgroup: WORKGROUP
-  skip_directories: []
+  include_directories:
+    - config
+    - ssl
+    - addons
+    - share
+    - backup
+    - media
   compatibility_mode: false
   veto_files:
     - ._*
@@ -44,7 +50,7 @@ schema:
   password: password
   workgroup: str
   compatibility_mode: bool
-  skip_directories:
+  include_directories:
     - match(config|ssl|addons|share|backup|media)
   veto_files:
     - str
