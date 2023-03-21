@@ -3,7 +3,7 @@ version: 1.0.0
 slug: samba_folders
 name: Samba Folders
 description: Expose Home Assistant folders with SMB/CIFS
-url: https://github.com/fcastilloec/hassio-addons/tree/master/samba-folders
+url: https://github.com/fcastilloec/hassio-addons/tree/main/samba-folders
 codenotary: notary@home-assistant.io
 arch:
   - armhf
