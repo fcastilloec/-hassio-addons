@@ -1,5 +1,5 @@
 ---
-version: 1.0.0
+version: 1.0.1
 slug: samba_folders
 name: Samba Folders
 description: Expose Home Assistant folders with SMB/CIFS
