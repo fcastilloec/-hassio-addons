@@ -12,8 +12,8 @@
    log level = 2
 
    bind interfaces only = yes
-   interfaces = {{ .interfaces | join " " }}
-   hosts allow = {{ .allow_hosts | join " " }}
+   interfaces = 127.0.0.1 {{ .interfaces | join " " }}
+   hosts allow = 127.0.0.1 {{ .allow_hosts | join " " }}
 
    {{ if .compatibility_mode }}
    client min protocol = NT1
@@ -23,3 +23,6 @@
    mangled names = no
    dos charset = CP850
    unix charset = UTF-8
+
+   veto files = /{{ .veto_files | join "/" }}/
+   delete veto files = {{ eq (len .veto_files) 0 | ternary "no" "yes" }}
