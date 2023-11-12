@@ -1,5 +1,5 @@
 ---
-version: 2.0.0
+version: 3.0.0
 slug: samba_folders
 name: Samba Folders
 description: Expose Home Assistant folders with SMB/CIFS
@@ -17,9 +17,8 @@ host_network: true
 init: false
 map:
   - addons:rw
-  - all_addon_configs:rw
   - backup:rw
-  - homeassistant_config:rw
+  - config:rw
   - media:rw
   - share:rw
   - ssl:rw
@@ -29,9 +28,8 @@ options:
   workgroup: WORKGROUP
   include_directories:
     - addons
-    - all_addon_configs
     - backup
-    - homeassistant_config
+    - config
     - media
     - share
     - ssl
@@ -55,7 +53,7 @@ schema:
   workgroup: str
   compatibility_mode: bool
   include_directories:
-    - match(addons|all_addon_configs|backup|homeassistant_config|media|share|ssl)
+    - match(addons|backup|config|media|share|ssl)
   veto_files:
     - str
   allow_hosts:

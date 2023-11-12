@@ -23,6 +23,3 @@
    mangled names = no
    dos charset = CP850
    unix charset = UTF-8
-
-   veto files = /{{ .veto_files | join "/" }}/
-   delete veto files = {{ eq (len .veto_files) 0 | ternary "no" "yes" }}
