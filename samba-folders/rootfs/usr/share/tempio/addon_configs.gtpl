@@ -1,7 +1,7 @@
-[config]
+[addon_configs]
    browseable = yes
    writeable = yes
-   path = /homeassistant
+   path = /addon_configs
 
    valid users = {{ .username }}
    force user = root
