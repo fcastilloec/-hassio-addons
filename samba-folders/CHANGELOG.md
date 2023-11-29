@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.2.0
+
+- Decrease Samba log level
+
 ## 3.1.0
 
 - Use the new Home Assistant folder for the `config` share
