@@ -1,5 +1,10 @@
 # Changelog
 
+## 12.3.0
+
+- Upgrade Alpine Linux to 3.19
+- Follow the version numbering of the official add-on
+
 ## 3.2.0
 
 - Decrease Samba log level
