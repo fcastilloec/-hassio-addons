@@ -11,5 +11,3 @@ https://github.com/fcastilloec/hassio-addons
 ```
 
 ## Add-ons in this repository
-
-- **[Samba Folders](/samba-folders/README.md)**: Samba share where you can choose which folders to include.
