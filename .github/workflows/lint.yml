@@ -23,7 +23,7 @@ jobs:
       - name: Run linter
         id: changed_files
         run: |
-          shopt -s globstar
+          shopt -s globstar nullglob
           for dockerfile in **/Dockerfile; do
             echo "Linting: $dockerfile"
             docker run --rm -i \
